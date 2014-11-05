@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	"$basetexture"	"models\sligwolf\bus\bustex002"
+	"$bumpmap" "models\sligwolf\bus\bustex002_bump"
+}
+

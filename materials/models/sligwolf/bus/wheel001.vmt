@@ -1,0 +1,10 @@
+"VertexLitGeneric"
+{
+	"$basetexture"	"models\sligwolf\bus\wheel001"
+	"$envmap" "env_cubemap"	
+	"$envmapmask" "models\sligwolf\bus\wheel001_mask"
+	"$envmapcontrast" 1
+	"$surfaceprop" "metal"
+	"$model" 1
+}
+

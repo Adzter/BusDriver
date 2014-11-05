@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models\sligwolf\bus\glass"
+	"$surfaceprop" "glass"
+	"$translucent" "1"
+}

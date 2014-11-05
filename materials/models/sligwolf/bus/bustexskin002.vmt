@@ -1,0 +1,11 @@
+"vertexlitgeneric"
+{
+	"$baseTexture" 	"\models\sligwolf\bus\bustexskin002"
+	"$envmap" "env_cubemap"	
+	"$envmapmask" "models\sligwolf\bus\bustex_mask"
+	"$envmapcontrast" 1
+	"$halflambert" 1
+	"$nodecal" "1"
+	"$model" "1"
+	"$selfillum" 1
+}
