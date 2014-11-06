@@ -205,6 +205,13 @@ local function BusLight( player,key )
 									vehicle.VehicleTable.SWBusDoorOpenClose = 0
 								end
 							end)
+						local mins = vehicle:LocalToWorld( vehicle:OBBMins() )
+						local maxs = vehicle:LocalToWorld( vehicle:OBBMaxs() )
+						for k,v in pairs( ents.FindInBox( mins, maxs ) ) do
+							if v:IsPlayer() and not table.HasValue( hasTicket, v ) and not table.HasValue( ticketConfig.excludedJobs, team.GetName(v:Team()) ) then
+								v:wanted( v, "Evading bus fares" )
+							end
+						end
 					end
 				end
 			end

@@ -84,16 +84,6 @@ function checkTicket( ply, ent )
 end
 hook.Add( "PlayerUse", "checkTicket", checkTicket )
 
--- lets make it so that only people with the bus driver job
--- can actually get in the vehicle
-hook.Add( "CanPlayerEnterVehicle", "busDriverOnly", function(ply, veh)
-   if not (IsValid(ply) and IsValid(veh)) then return end
-   
-   if veh:GetClass() == "not sure yet what goes here" then
-      if ply:Team() != TEAM_WHATEVER then return false end
-   end
-end)
-
 function ENT:Think()
 end
 

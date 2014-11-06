@@ -22,3 +22,14 @@ ticketConfig.success = "All day ticket purchased"
 ticketConfig.already = "You already own a ticket"
 ticketConfig.cannotAfford = "You cannot afford a ticket"
 ticketConfig.noTicket = "You do not own a ticket"
+ticketConfig.excludedJobs = {
+	-- Any job that you don't want to be auto-wanted for not having a ticket put in here
+	"Civil Protection",
+	"Civil Protection Chief",
+	"Mayor",
+	"Bus Driver",
+	-- Below this line is custom classes
+	"Staff on duty",
+	"SWAT"
+	-- Remember to not include a comma on the last one
+}
