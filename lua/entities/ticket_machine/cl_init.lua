@@ -17,7 +17,8 @@ function ENT:Draw()
 		draw.RoundedBox( 0, -38, 4, 80, 20, Color( 0, 0, 0, 255) )
 		draw.DrawText("Bus Tickets", "ticketMachine", 0, 5, Color(255, 255, 255, 255), TEXT_ALIGN_CENTER )
 		
+		local text = ticketConfig.currency .. ticketConfig.price .. " All Day"
 		draw.RoundedBox( 0, -38, -143, 80, 20, Color( 0, 0, 0, 255) )
-		draw.DrawText("$150 All Day", "ticketMachine", 0, -142, Color(255, 255, 255, 255), TEXT_ALIGN_CENTER )
+		draw.DrawText( text, "ticketMachine", 0, -142, Color(255, 255, 255, 255), TEXT_ALIGN_CENTER )
 	cam.End3D2D()
 end
