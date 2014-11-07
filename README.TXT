@@ -12,3 +12,6 @@ TEAM_BUS = DarkRP.createJob("Bus Driver", {
 	vote = false,
 	hasLicense = false,
 })
+
+If you want to change any config settings then edit:
+lua/entities/ticket_machine/shared.lua
