@@ -13,5 +13,21 @@ TEAM_BUS = DarkRP.createJob("Bus Driver", {
 	hasLicense = false,
 })
 
+Example of bus driver vehicle:
+
+DarkRP.createVehicle({
+	
+	name = "sw_bus",
+	
+	model = "models/sligwolf/bus/bus.mdl",
+	
+	price = 1000,
+
+	allowed = {TEAM_BUS},
+
+	label = "Single Bus",
+
+})
+
 If you want to change any config settings then edit:
 lua/entities/ticket_machine/shared.lua
