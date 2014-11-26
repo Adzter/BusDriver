@@ -207,8 +207,6 @@ local function BusLight( player,key )
 							end)
 						local mins = vehicle:LocalToWorld( vehicle:OBBMins() + Vector( 80, 80, 80 ) )
 						local maxs = vehicle:LocalToWorld( vehicle:OBBMaxs() - Vector( 80, 80, 80 ) )
-						print( mins )
-						print( maxs )
 						for k,v in pairs( ents.FindInBox( mins, maxs ) ) do
 							if v:IsPlayer() and not table.HasValue( hasTicket, v ) and not table.HasValue( ticketConfig.excludedJobs, team.GetName(v:Team()) ) then
 								v:wanted( v, "Evading bus fares" )
