@@ -14,7 +14,7 @@ ticketConfig = {}
 -- You should only really edit the values below
 -- here unless you know what you're doing
 
-ticketConfig.job = TEAM_BUS
+ticketConfig.job = "busdriver"
 ticketConfig.price = 150
 ticketConfig.paycheck = "You received a ticket sale of: " -- note the price is automatically added on the end
 ticketConfig.currency = "$"	-- currency shown in the above message

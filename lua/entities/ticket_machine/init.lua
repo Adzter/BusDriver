@@ -20,6 +20,8 @@ function ENT:Initialize()
 end
  
 function ENT:Use( activator, caller )
+	if DarkRP.getJobByCommand( ticketConfig.job ).team == activator:Team() then return end
+
 	-- Check if the player already has a ticket
 	if table.HasValue( hasTicket, activator ) then 
 		DarkRP.notify( activator, 1, 10, ticketConfig.already )
@@ -43,12 +45,14 @@ function ENT:Use( activator, caller )
 	-- and if there's more than one, split the profits, first check
 	-- if there's actually a bus driver though
 	
-	if #team.GetPlayers( ticketConfig.job ) > 0 then
-		local paycheck = math.floor( ticketConfig.price / #team.GetPlayers( ticketConfig.job ))
+	
+	
+	if #team.GetPlayers( DarkRP.getJobByCommand( ticketConfig.job ).team ) > 0 then
+		local paycheck = math.floor( ticketConfig.price / #team.GetPlayers( DarkRP.getJobByCommand( ticketConfig.job ).team ) )
 		-- The paycheck per person is the price of the ticket divided by the players
 		-- rounded down to prevent any rounding up exploits
 		
-		for k,v in pairs( team.GetPlayers( ticketConfig.job ) ) do
+		for k,v in pairs( team.GetPlayers( DarkRP.getJobByCommand( ticketConfig.job ).team ) ) do
 			v:addMoney ( paycheck )
 			DarkRP.notify( v, 0, 10, ticketConfig.paycheck .. ticketConfig.currency .. paycheck )
 		end
